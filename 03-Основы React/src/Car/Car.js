@@ -12,11 +12,16 @@ import React from 'react';
 //     )
 // }
 
-const car = ({name, year, children}) => (
-    <div>
-        <h3>Car name: {name}</h3>
-        <p>Number: <strong style={{color: 'brown'}}>{year}</strong></p>
-        {children}
+const car = (props) => (
+    <div style={{
+        border: '1px solid #ccc',
+        marginBottom: '10px',
+        padding: '10px'
+    }}>
+        <h3>Car name: {props.name}</h3>
+        <p>Number: <strong style={{color: 'brown'}}>{props.year}</strong></p>
+        <input type="text" onChange={props.onChangeName} value={props.name}/>
+        <button onClick={props.onDelete}>Delete</button>
     </div>
 )
 
