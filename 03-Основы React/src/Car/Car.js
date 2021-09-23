@@ -13,11 +13,7 @@ import React from 'react';
 // }
 
 const car = (props) => (
-    <div style={{
-        border: '1px solid #ccc',
-        marginBottom: '10px',
-        padding: '10px'
-    }}>
+    <div className="car">
         <h3>Car name: {props.name}</h3>
         <p>Number: <strong style={{color: 'brown'}}>{props.year}</strong></p>
         <input type="text" onChange={props.onChangeName} value={props.name}/>
